@@ -15,12 +15,9 @@ class ContactListViewController: UITableViewController {
         super.viewDidLoad()
     }
 
-
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         contactList.count
     }
-
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contact", for: indexPath)
@@ -39,5 +36,4 @@ class ContactListViewController: UITableViewController {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         detailsVC?.contact = contactList[indexPath.row]
     }
-
 }
