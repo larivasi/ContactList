@@ -9,7 +9,7 @@ import UIKit
 
 class ContactListViewController: UITableViewController {
     
-    private var contactList = Person.getContact()
+    var contactList = Person.getContact()
 
     override func viewDidLoad() {
         super.viewDidLoad()
